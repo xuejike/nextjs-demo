@@ -9,9 +9,16 @@ export default (req, res) => {
   });
 //   res.statusCode = 200;
   res.write(':ok\n\n');
-    setTimeout(function (){
-        res.write(':ok\n\n');
-
-    res.end()
+  setTimeout(function (){
+    res.write(`event:xxxx\ndata:${new Date().toLocaleTimeString()}\n\r\n\r\n\r\n`)
+  },1000)
+  setTimeout(function (){
+    res.write(`event:xxxx\ndata:${new Date().toLocaleTimeString()}\n\r\n\r\n\r\n`)
   },2000)
+  setTimeout(function (){
+    res.write(`event:xxxx\ndata:${new Date().toLocaleTimeString()}\n\r\n\r\n\r\n`)
+  },3000)
+  setTimeout(function (){
+    res.end()
+  },10000)
 }
