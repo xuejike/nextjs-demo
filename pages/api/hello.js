@@ -3,6 +3,7 @@
 export default (req, res) => {
   req.socket.setNoDelay(true);
 
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
+  res.statusCode = 200;
+  res.write(':ok\n\n');
+  res.end();
 }
