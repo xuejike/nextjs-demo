@@ -13,5 +13,5 @@ export default (req, res) => {
         res.write(':ok\n\n');
 
     res.end()
-  },1000)
+  },2000)
 }
