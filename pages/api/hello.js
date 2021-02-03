@@ -10,5 +10,7 @@ export default (req, res) => {
 //   res.statusCode = 200;
   res.write(':ok\n\n');
   res.write(':ok\n\n');
-  res.end();
+    setTimeout(function (){
+    res.end()
+  },1000)
 }
