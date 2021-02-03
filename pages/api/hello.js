@@ -20,5 +20,5 @@ export default (req, res) => {
   },3000)
   setTimeout(function (){
     res.end()
-  },10000)
+  },3001)
 }
